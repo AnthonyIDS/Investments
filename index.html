@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investments Dashboard</title>
+  <meta name="description" content="Watchlist dashboard: growth picks, index ETFs, an income fund, and the largest-EBITDA energy and tech stocks.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div>
+        <h1>Investments</h1>
+        <p class="sub" id="subline">Loading…</p>
+      </div>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">◐</button>
+    </header>
+
+    <div class="banner" id="banner" hidden></div>
+
+    <section class="tiles" id="tiles" aria-label="Summary"></section>
+
+    <div class="controls" role="toolbar" aria-label="Filters">
+      <div class="seg" id="groupSeg" aria-label="Group"></div>
+      <div class="seg" id="rangeSeg" aria-label="Time range"></div>
+    </div>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Watchlist</h2>
+        <p class="hint">Tick up to 4 rows to compare them in the chart below. Click a column header to sort.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="table">
+          <thead>
+            <tr>
+              <th class="c-cmp" scope="col"><span class="sr">Compare</span></th>
+              <th scope="col" data-sort="symbol">Symbol</th>
+              <th scope="col" data-sort="group" class="c-group">Group</th>
+              <th scope="col" data-sort="price" class="num">Price</th>
+              <th scope="col" data-sort="day" class="num">Today</th>
+              <th scope="col" data-sort="range" class="num" id="rangeHead">1Y</th>
+              <th scope="col" class="c-52">52-week range</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 id="cmpTitle">Growth of $100</h2>
+        <p class="hint" id="cmpHint"></p>
+      </div>
+      <div class="legend" id="cmpLegend"></div>
+      <div class="chart-box"><canvas id="cmpChart" aria-label="Comparison chart"></canvas></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Why these energy and tech names</h2>
+        <p class="hint" id="ebitdaHint"></p>
+      </div>
+      <div class="legend">
+        <span class="key"><i style="background:var(--series-1)"></i>Tech</span>
+        <span class="key"><i style="background:var(--series-2)"></i>Energy</span>
+      </div>
+      <div class="chart-box bars"><canvas id="ebitdaChart" aria-label="Trailing twelve-month EBITDA by company"></canvas></div>
+      <details class="method">
+        <summary>Method and sources</summary>
+        <p id="ebitdaMethod"></p>
+        <ul id="ebitdaSources"></ul>
+      </details>
+    </section>
+
+    <footer class="foot">
+      <p id="footSource"></p>
+      <p>For information only, not investment advice. Prices can be delayed and figures can contain errors; check before acting.</p>
+    </footer>
+  </div>
+</body>
+</html>

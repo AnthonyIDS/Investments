@@ -1,0 +1,40 @@
+{
+  "title": "Investments Dashboard",
+  "groups": [
+    { "id": "growth", "label": "Growth picks" },
+    { "id": "index", "label": "Index ETFs" },
+    { "id": "income", "label": "Income fund" },
+    { "id": "energy", "label": "Energy · top EBITDA" },
+    { "id": "tech", "label": "Tech · top EBITDA" }
+  ],
+  "symbols": [
+    { "symbol": "ACHR", "name": "Archer Aviation", "group": "growth", "kind": "Stock", "about": "Electric air-taxi (eVTOL) developer" },
+    { "symbol": "RGTI", "name": "Rigetti Computing", "group": "growth", "kind": "Stock", "about": "Quantum computing hardware and cloud" },
+    { "symbol": "QQQ", "name": "Invesco QQQ Trust", "group": "index", "kind": "ETF", "about": "Tracks the Nasdaq-100" },
+    { "symbol": "VOO", "name": "Vanguard S&P 500 ETF", "group": "index", "kind": "ETF", "about": "Tracks the S&P 500" },
+    { "symbol": "CHW", "name": "Calamos Global Dynamic Income Fund", "group": "income", "kind": "Closed-end fund", "about": "Global multi-asset income fund, monthly distributions" },
+    { "symbol": "XOM", "name": "Exxon Mobil", "group": "energy", "kind": "Stock", "about": "Integrated oil & gas" },
+    { "symbol": "SHEL", "name": "Shell plc (ADR)", "group": "energy", "kind": "Stock", "about": "Integrated oil & gas, LNG" },
+    { "symbol": "CVX", "name": "Chevron", "group": "energy", "kind": "Stock", "about": "Integrated oil & gas" },
+    { "symbol": "TTE", "name": "TotalEnergies (ADR)", "group": "energy", "kind": "Stock", "about": "Integrated oil, gas & power" },
+    { "symbol": "NVDA", "name": "NVIDIA", "group": "tech", "kind": "Stock", "about": "GPUs and AI data-center systems" },
+    { "symbol": "MSFT", "name": "Microsoft", "group": "tech", "kind": "Stock", "about": "Software and Azure cloud" },
+    { "symbol": "AAPL", "name": "Apple", "group": "tech", "kind": "Stock", "about": "Consumer devices and services" },
+    { "symbol": "TSM", "name": "Taiwan Semiconductor (ADR)", "group": "tech", "kind": "Stock", "about": "Contract chip manufacturing" }
+  ],
+  "ebitda_screen": {
+    "screened_on": "2026-10-16",
+    "method": "Largest trailing-twelve-month EBITDA in US dollars among US-listed shares (including ADRs). 'Tech' means the Information Technology sector, so Alphabet and Meta (Communication Services) are not included. Figures are a snapshot and do not update automatically.",
+    "rows": [
+      { "symbol": "NVDA", "sector": "tech", "ebitda_b": 201.3, "period_end": "2026-07-26", "source": "https://stockanalysis.com/stocks/nvda/financials/income-statement/" },
+      { "symbol": "MSFT", "sector": "tech", "ebitda_b": 194.2, "period_end": "2026-06-30", "source": "https://stockanalysis.com/stocks/msft/financials/income-statement/" },
+      { "symbol": "AAPL", "sector": "tech", "ebitda_b": 168.0, "period_end": "2026-06-27", "source": "https://stockanalysis.com/stocks/aapl/financials/income-statement/" },
+      { "symbol": "TSM", "sector": "tech", "ebitda_b": 101.7, "period_end": "2026-06-30", "source": "https://tickerleague.com/rankings/ebitda/technology", "note": "Reported in TWD (3.17 trillion); USD figure from tickerleague" },
+      { "symbol": "XOM", "sector": "energy", "ebitda_b": 67.9, "period_end": "2026-06-30", "source": "https://stockanalysis.com/stocks/xom/financials/income-statement/" },
+      { "symbol": "SHEL", "sector": "energy", "ebitda_b": 57.6, "period_end": "2026-06-30", "source": "https://stockanalysis.com/stocks/shel/financials/income-statement/" },
+      { "symbol": "CVX", "sector": "energy", "ebitda_b": 50.7, "period_end": "2026-06-30", "source": "https://stockanalysis.com/stocks/cvx/financials/income-statement/" },
+      { "symbol": "TTE", "sector": "energy", "ebitda_b": 39.7, "period_end": "2026-06-30", "source": "https://stockanalysis.com/stocks/tte/financials/income-statement/" }
+    ],
+    "next_in_line": "ConocoPhillips (COP) at $26.8B TTM was the next-largest energy name; Broadcom (AVGO) the next tech name."
+  }
+}
